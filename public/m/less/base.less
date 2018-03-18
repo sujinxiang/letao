@@ -1,0 +1,62 @@
+img{
+	/* 解决图片和块级元素对齐方式 解决底部3px间隙的问题 */
+	vertical-align: middle;
+}
+
+@main-color:#006699;
+// 公共的头部区域
+#header{
+    height: 50px;
+    width: 100%;
+    background-color: @main-color;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    >h3{
+        margin: 0;
+        color: white;
+        font-weight: normal;
+        line-height: 50px;
+        text-align: center
+    }
+    .fa-search{
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        color: white;
+    }
+}
+
+
+#main{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+// 公共底部区域
+#footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: @main-color;
+    z-index: 999;
+    .mui-row{
+        >div{
+            >a{
+                color: white;
+                font-size: 16px;
+                display: block;
+                text-align: center;
+                padding-top: 10px;
+                
+                >span{
+                    display: block;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
